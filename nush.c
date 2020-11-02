@@ -97,7 +97,8 @@ redir_in(nush_ast* tree) {
         int status;
         waitpid(cpid, &status, 0);
 
-    } else {
+    } 
+    else {
         int in = open(svec_get(tree->arg1->value, 0), O_RDONLY);
 
         close(0);
